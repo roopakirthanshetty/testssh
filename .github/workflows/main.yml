@@ -33,7 +33,7 @@ jobs:
         PORT: 22
         KEY: ${{ secrets.testkir }}
       with:
-        script: "prod.sh"
+        script: /bin/bash prod.sh
 #test branch
     - name: Deploy test
       if: github.ref == 'refs/heads/dev'
@@ -44,7 +44,7 @@ jobs:
         PORT: 22
         KEY: ${{ secrets.testkir }}
       with:
-        script: dev.sh
+        script: /bin/bash dev.sh
 #      env:
 #        HOST: 54.172.13.190
 #        USERNAME: gitaction
