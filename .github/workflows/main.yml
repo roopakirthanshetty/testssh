@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
+      uses: appleboy/scp-action@master
 #prod
     - name: Deploy prod
       if: github.ref == 'refs/heads/master'
